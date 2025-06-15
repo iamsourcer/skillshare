@@ -11,63 +11,51 @@ const CompanyCarousel = () => {
   const companies = [
     {
       name: "Mercado Libre",
-      color: "#FFE600",
-      textColor: "#2D2D2D"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Crect width='200' height='60' fill='%23FFE600'/%3E%3Ctext x='100' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='bold' fill='%232D2D2D'%3EMercadoLibre%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Uala",
-      color: "#FF5100",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Crect width='120' height='60' fill='%23FF5100'/%3E%3Ctext x='60' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='white'%3EUala%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Globant",
-      color: "#00BAF2",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 60'%3E%3Crect width='140' height='60' fill='%2300BAF2'/%3E%3Ctext x='70' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EGlobant%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Banco Galicia",
-      color: "#FF6D00",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 60'%3E%3Crect width='160' height='60' fill='%23FF6D00'/%3E%3Ctext x='80' y='30' text-anchor='middle' font-family='Arial,sans-serif' font-size='14' font-weight='bold' fill='white'%3EBanco%3C/text%3E%3Ctext x='80' y='45' text-anchor='middle' font-family='Arial,sans-serif' font-size='14' font-weight='bold' fill='white'%3EGalicia%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Accenture",
-      color: "#A100FF",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 60'%3E%3Crect width='150' height='60' fill='%23A100FF'/%3E%3Ctext x='75' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='bold' fill='white'%3EAccenture%3C/text%3E%3C/svg%3E"
     },
     {
       name: "IBM",
-      color: "#053080",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect width='100' height='60' fill='%23053080'/%3E%3Ctext x='50' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='white'%3EIBM%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Despegar",
-      color: "#0080FF",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 60'%3E%3Crect width='140' height='60' fill='%230080FF'/%3E%3Ctext x='70' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='bold' fill='white'%3EDespegar%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Santander",
-      color: "#DC142C",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 60'%3E%3Crect width='150' height='60' fill='%23DC142C'/%3E%3Ctext x='75' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='bold' fill='white'%3ESantander%3C/text%3E%3C/svg%3E"
     },
     {
       name: "BBVA",
-      color: "#004C97",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 60'%3E%3Crect width='120' height='60' fill='%23004C97'/%3E%3Ctext x='60' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EBBVA%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Telecom",
-      color: "#E51680",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 60'%3E%3Crect width='140' height='60' fill='%23E51680'/%3E%3Ctext x='70' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='bold' fill='white'%3ETelecom%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Naranja X",
-      color: "#FF6900",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 60'%3E%3Crect width='140' height='60' fill='%23FF6900'/%3E%3Ctext x='70' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='16' font-weight='bold' fill='white'%3ENaranja X%3C/text%3E%3C/svg%3E"
     },
     {
       name: "YPF",
-      color: "#008040",
-      textColor: "#FFFFFF"
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect width='100' height='60' fill='%23008040'/%3E%3Ctext x='50' y='35' text-anchor='middle' font-family='Arial,sans-serif' font-size='18' font-weight='bold' fill='white'%3EYPF%3C/text%3E%3C/svg%3E"
     }
   ];
 
@@ -96,16 +84,13 @@ const CompanyCarousel = () => {
               {companies.map((company, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
                   <div className="p-2">
-                    <div 
-                      className="rounded-lg shadow-sm border border-gray-200 p-4 h-20 flex items-center justify-center hover:shadow-md transition-shadow duration-300"
-                      style={{ backgroundColor: company.color }}
-                    >
-                      <span 
-                        className="font-bold text-xs text-center leading-tight"
-                        style={{ color: company.textColor }}
-                      >
-                        {company.name}
-                      </span>
+                    <div className="rounded-lg shadow-sm border border-gray-200 p-4 h-20 flex items-center justify-center hover:shadow-md transition-shadow duration-300 bg-white">
+                      <img 
+                        src={company.logo} 
+                        alt={company.name}
+                        className="max-w-full max-h-full object-contain"
+                        style={{ filter: 'none' }}
+                      />
                     </div>
                   </div>
                 </CarouselItem>

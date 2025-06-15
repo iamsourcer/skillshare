@@ -20,7 +20,7 @@ const SkillsExplorer = () => {
     {
       id: 1,
       name: "Ana María Rodríguez",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=150&q=80",
+      image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
       location: "CABA, Buenos Aires",
       course: "Análisis de Sistemas",
       year: "3er Año",
@@ -117,6 +117,7 @@ const SkillsExplorer = () => {
   };
 
   const handleViewProfile = (studentId: number) => {
+    console.log('Navigating to profile:', studentId);
     navigate(`/profile/${studentId}`);
   };
 
