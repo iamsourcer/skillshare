@@ -11,19 +11,19 @@ const CompanyCarousel = () => {
   const companies = [
     {
       name: "Mercado Libre",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/MercadoLibre_Logo.svg/2048px-MercadoLibre_Logo.svg.png"
+      logo: "https://logosvector.net/wp-content/uploads/2022/01/mercadolibre-logo-vector.png"
     },
     {
       name: "Uala",
-      logo: "https://seeklogo.com/images/U/uala-logo-6A2A4CE778-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/uala-1.svg"
     },
     {
       name: "Globant",
-      logo: "https://seeklogo.com/images/G/globant-logo-FAE5E4D14D-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/globant-3.svg"
     },
     {
       name: "Banco Galicia",
-      logo: "https://seeklogo.com/images/B/banco-galicia-logo-04D47CECE0-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/banco-galicia-1.svg"
     },
     {
       name: "Accenture",
@@ -35,7 +35,7 @@ const CompanyCarousel = () => {
     },
     {
       name: "Despegar",
-      logo: "https://seeklogo.com/images/D/despegar-logo-4B2C1F1A30-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/despegar-1.svg"
     },
     {
       name: "Santander Argentina",
@@ -43,19 +43,19 @@ const CompanyCarousel = () => {
     },
     {
       name: "BBVA Argentina",
-      logo: "https://seeklogo.com/images/B/bbva-logo-4C8BCB4C65-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/bbva-banco-bilbao-vizcaya-argentaria.svg"
     },
     {
       name: "Telecom Argentina",
-      logo: "https://seeklogo.com/images/T/telecom-argentina-logo-35A7C2E2C9-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/telecom-argentina.svg"
     },
     {
       name: "Naranja X",
-      logo: "https://seeklogo.com/images/N/naranja-x-logo-FA67B1A0D5-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/naranja-x.svg"
     },
     {
       name: "YPF",
-      logo: "https://seeklogo.com/images/Y/ypf-logo-BB22485A92-seeklogo.com.png"
+      logo: "https://cdn.worldvectorlogo.com/logos/ypf-1.svg"
     }
   ];
 
@@ -91,7 +91,15 @@ const CompanyCarousel = () => {
                         className="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                         onError={(e) => {
                           console.log(`Failed to load image for ${company.name}:`, company.logo);
+                          // Show company name as fallback
                           e.currentTarget.style.display = 'none';
+                          const parent = e.currentTarget.parentElement;
+                          if (parent && !parent.querySelector('.fallback-text')) {
+                            const fallback = document.createElement('div');
+                            fallback.className = 'fallback-text text-xs text-gray-600 font-medium text-center';
+                            fallback.textContent = company.name;
+                            parent.appendChild(fallback);
+                          }
                         }}
                       />
                     </div>
