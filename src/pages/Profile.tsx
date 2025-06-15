@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { Star, MapPin, Mail, Phone, Calendar, Languages, Code, Briefcase } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -9,77 +9,127 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Profile = () => {
+  const { id } = useParams();
   const [selectedTab, setSelectedTab] = useState("overview");
 
-  // Mock student data
-  const student = {
-    id: 1,
-    name: "Ana María Rodríguez",
-    image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
-    location: "Buenos Aires, Argentina",
-    email: "ana.rodriguez@ifts18.edu.ar",
-    phone: "+54 11 1234-5678",
-    course: "Tecnicatura en Análisis de Sistemas",
-    year: "3er Año",
-    joinDate: "Marzo 2023",
-    rating: 4.8,
-    totalReviews: 23,
-    mentorSessions: 45,
-    bio: "Estudiante apasionada por el desarrollo web y la programación. Me especializo en React y Python, y disfruto enseñar a otros estudiantes. Busco constantemente aprender nuevas tecnologías.",
-    skills: [
-      { name: "React", level: "Avanzado", category: "Frontend" },
-      { name: "Python", level: "Intermedio", category: "Backend" },
-      { name: "JavaScript", level: "Avanzado", category: "Frontend" },
-      { name: "HTML/CSS", level: "Avanzado", category: "Frontend" },
-      { name: "SQL", level: "Básico", category: "Database" },
-      { name: "Git", level: "Intermedio", category: "Tools" }
-    ],
-    languages: [
-      { name: "Español", level: "Nativo" },
-      { name: "Inglés", level: "Intermedio" },
-      { name: "Portugués", level: "Básico" }
-    ],
-    experiences: [
-      {
-        title: "Desarrolladora Frontend Junior",
-        company: "Startup Local",
-        period: "Jun 2024 - Presente",
-        description: "Desarrollo de interfaces web usando React y Tailwind CSS. Colaboración en equipo ágil."
-      },
-      {
-        title: "Freelance Web Developer",
-        company: "Proyectos Independientes",
-        period: "Ene 2024 - May 2024",
-        description: "Creación de sitios web para pequeños negocios locales usando HTML, CSS y JavaScript."
-      }
-    ],
-    reviews: [
-      {
-        id: 1,
-        author: "Carlos López",
-        rating: 5,
-        date: "15 Nov 2024",
-        comment: "Ana es una excelente mentora. Me ayudó a entender React de manera muy clara y práctica.",
-        subject: "React Fundamentos"
-      },
-      {
-        id: 2,
-        author: "María González",
-        rating: 5,
-        date: "08 Nov 2024",
-        comment: "Muy paciente y didáctica. Sus explicaciones de JavaScript son súper claras.",
-        subject: "JavaScript Avanzado"
-      },
-      {
-        id: 3,
-        author: "Diego Fernández",
-        rating: 4,
-        date: "01 Nov 2024",
-        comment: "Gran conocimiento técnico y muy buena disposición para enseñar.",
-        subject: "Desarrollo Web"
-      }
-    ]
-  };
+  // Mock student data - find student by ID or default to first one
+  const allStudents = [
+    {
+      id: 1,
+      name: "Ana María Rodríguez",
+      image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
+      location: "Buenos Aires, Argentina",
+      email: "ana.rodriguez@ifts18.edu.ar",
+      phone: "+54 11 1234-5678",
+      course: "Tecnicatura en Análisis de Sistemas",
+      year: "3er Año",
+      joinDate: "Marzo 2023",
+      rating: 4.8,
+      totalReviews: 23,
+      mentorSessions: 45,
+      bio: "Estudiante apasionada por el desarrollo web y la programación. Me especializo en React y Python, y disfruto enseñar a otros estudiantes. Busco constantemente aprender nuevas tecnologías.",
+      skills: [
+        { name: "React", level: "Avanzado", category: "Frontend" },
+        { name: "Python", level: "Intermedio", category: "Backend" },
+        { name: "JavaScript", level: "Avanzado", category: "Frontend" },
+        { name: "HTML/CSS", level: "Avanzado", category: "Frontend" },
+        { name: "SQL", level: "Básico", category: "Database" },
+        { name: "Git", level: "Intermedio", category: "Tools" }
+      ],
+      languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Intermedio" },
+        { name: "Portugués", level: "Básico" }
+      ],
+      experiences: [
+        {
+          title: "Desarrolladora Frontend Junior",
+          company: "Startup Local",
+          period: "Jun 2024 - Presente",
+          description: "Desarrollo de interfaces web usando React y Tailwind CSS. Colaboración en equipo ágil."
+        },
+        {
+          title: "Freelance Web Developer",
+          company: "Proyectos Independientes",
+          period: "Ene 2024 - May 2024",
+          description: "Creación de sitios web para pequeños negocios locales usando HTML, CSS y JavaScript."
+        }
+      ],
+      reviews: [
+        {
+          id: 1,
+          author: "Carlos López",
+          rating: 5,
+          date: "15 Nov 2024",
+          comment: "Ana es una excelente mentora. Me ayudó a entender React de manera muy clara y práctica.",
+          subject: "React Fundamentos"
+        },
+        {
+          id: 2,
+          author: "María González",
+          rating: 5,
+          date: "08 Nov 2024",
+          comment: "Muy paciente y didáctica. Sus explicaciones de JavaScript son súper claras.",
+          subject: "JavaScript Avanzado"
+        },
+        {
+          id: 3,
+          author: "Diego Fernández",
+          rating: 4,
+          date: "01 Nov 2024",
+          comment: "Gran conocimiento técnico y muy buena disposición para enseñar.",
+          subject: "Desarrollo Web"
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: "Carlos López",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80",
+      location: "La Plata, Buenos Aires",
+      email: "carlos.lopez@ifts18.edu.ar",
+      phone: "+54 221 1234-5678",
+      course: "Tecnicatura en Desarrollo Web",
+      year: "2do Año",
+      joinDate: "Agosto 2023",
+      rating: 4.8,
+      totalReviews: 19,
+      mentorSessions: 38,
+      bio: "Especialista en desarrollo backend y bases de datos. Me gusta enseñar arquitectura de software y buenas prácticas de programación.",
+      skills: [
+        { name: "Node.js", level: "Avanzado", category: "Backend" },
+        { name: "MongoDB", level: "Intermedio", category: "Database" },
+        { name: "Express", level: "Avanzado", category: "Backend" },
+        { name: "Vue.js", level: "Intermedio", category: "Frontend" }
+      ],
+      languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Intermedio" }
+      ],
+      experiences: [
+        {
+          title: "Desarrollador Backend Junior",
+          company: "Empresa Local",
+          period: "Mar 2024 - Presente",
+          description: "Desarrollo de APIs REST y manejo de bases de datos MongoDB."
+        }
+      ],
+      reviews: [
+        {
+          id: 1,
+          author: "Ana Rodríguez",
+          rating: 5,
+          date: "12 Nov 2024",
+          comment: "Carlos explica muy bien los conceptos de backend. Excelente mentor.",
+          subject: "Node.js"
+        }
+      ]
+    }
+  ];
+
+  const student = allStudents.find(s => s.id === parseInt(id || '1')) || allStudents[0];
+
+  console.log('Profile component loaded with ID:', id, 'Student:', student.name);
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (

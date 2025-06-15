@@ -68,7 +68,7 @@ const TopStudents = () => {
   };
 
   const handleViewProfile = (studentId: number) => {
-    console.log('Navigating to profile:', studentId);
+    console.log('TopStudents - Navigating to profile ID:', studentId);
     navigate(`/profile/${studentId}`);
   };
 

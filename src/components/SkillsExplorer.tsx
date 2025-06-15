@@ -117,7 +117,7 @@ const SkillsExplorer = () => {
   };
 
   const handleViewProfile = (studentId: number) => {
-    console.log('Navigating to profile:', studentId);
+    console.log('SkillsExplorer - Navigating to profile ID:', studentId);
     navigate(`/profile/${studentId}`);
   };
 
