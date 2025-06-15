@@ -15,11 +15,11 @@ const CompanyCarousel = () => {
     },
     {
       name: "Globant",
-      logo: "https://www.globant.com/sites/default/files/image/2021-06/globant-logo.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Globant_logo.svg/2560px-Globant_logo.svg.png"
     },
     {
       name: "Uala",
-      logo: "https://d1fdloi71mui9q.cloudfront.net/hqdefault_3SiCYGp6TSmBG71lc7ba.png"
+      logo: "https://media.licdn.com/dms/image/C4D0BAQGQs8CWz8nabQ/company-logo_200_200/0/1631315313949?e=2147483647&v=beta&t=8Qd8xQTJKm2QN_2xYsJxYnKj8cQxVhCXvQrxzPQgMzU"
     },
     {
       name: "Banco Galicia",
@@ -34,28 +34,28 @@ const CompanyCarousel = () => {
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"
     },
     {
-      name: "Microsoft",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png"
+      name: "Despegar",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Despegar.com_logo.svg/2560px-Despegar.com_logo.svg.png"
     },
     {
-      name: "Google",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+      name: "Santander Argentina",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Banco_Santander_Logotipo.svg/2560px-Banco_Santander_Logotipo.svg.png"
     },
     {
-      name: "Amazon",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+      name: "BBVA Argentina",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/BBVA_2019.svg/2560px-BBVA_2019.svg.png"
     },
     {
-      name: "Telefónica",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Telefonica_logo.svg/2560px-Telefonica_logo.svg.png"
+      name: "Telecom Argentina",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Telecom_Argentina_logo.svg/2560px-Telecom_Argentina_logo.svg.png"
     },
     {
-      name: "Oracle",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/2560px-Oracle_logo.svg.png"
+      name: "Naranja X",
+      logo: "https://media.licdn.com/dms/image/C4D0BAQFxL8kQQQQQQQ/company-logo_200_200/0/1631315313949"
     },
     {
-      name: "SAP",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
+      name: "YPF",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/YPF_logo.svg/2560px-YPF_logo.svg.png"
     }
   ];
 
