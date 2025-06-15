@@ -32,6 +32,30 @@ const CompanyCarousel = () => {
     {
       name: "IBM",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/2560px-IBM_logo.svg.png"
+    },
+    {
+      name: "Microsoft",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2560px-Microsoft_logo.svg.png"
+    },
+    {
+      name: "Google",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+    },
+    {
+      name: "Amazon",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/2560px-Amazon_logo.svg.png"
+    },
+    {
+      name: "Telefónica",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Telefonica_logo.svg/2560px-Telefonica_logo.svg.png"
+    },
+    {
+      name: "Oracle",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/2560px-Oracle_logo.svg.png"
+    },
+    {
+      name: "SAP",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/2560px-SAP_2011_logo.svg.png"
     }
   ];
 
