@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,10 +6,10 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Inicio", href: "#" },
+    { name: "Inicio", href: "/" },
     { name: "Habilidades", href: "#skills" },
-    { name: "Comunidad", href: "#community" },
-    { name: "Eventos", href: "#events" },
+    { name: "Estudiantes", href: "#community" },
+    { name: "Empleos", href: "/jobs" },
     { name: "Contacto", href: "#contact" },
   ];
 
