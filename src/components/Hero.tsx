@@ -1,96 +1,83 @@
 
-import { ArrowRight, Play, Star, Users, BookOpen, Award } from "lucide-react";
+import { ArrowRight, Users, BookOpen, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16 overflow-hidden">
-      <div className="absolute inset-0 opacity-40">
+    <section className="relative bg-gradient-to-br from-teal-50 via-white to-teal-100 pt-20 pb-16 overflow-hidden">
+      <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232D7D7D' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
-          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <div className="mb-6">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                <Star className="w-4 h-4 mr-1" />
-                #1 Online Learning Platform
-              </span>
+        <div className="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+          <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-7 lg:text-left">
+            <div className="mb-8">
+              <h1 className="text-5xl tracking-tight font-bold text-gray-900 sm:text-6xl md:text-7xl">
+                <span className="block text-teal-600">¡Hola!</span>
+                <span className="block text-gray-800">Bienvenido a</span>
+                <span className="block text-teal-700 font-extrabold">IFTS18 Skillswap</span>
+              </h1>
             </div>
             
-            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-              <span className="block">Learn Without</span>
-              <span className="block text-blue-600">Limits</span>
-            </h1>
-            
-            <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-              Join millions of students learning with expert instructors. Build skills with courses, certificates, and degrees online from world-class institutions.
+            <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+              Conecta, aprende y comparte habilidades con otros estudiantes. 
+              Intercambia conocimientos y haz crecer tu red profesional.
             </p>
             
-            <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="text-lg px-8 py-3">
-                  Get Started Free
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                  <Play className="mr-2 h-5 w-5" />
-                  Watch Demo
-                </Button>
-              </div>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="text-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold">
+                Comenzar Ahora
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-teal-600 text-teal-700 hover:bg-teal-50 font-semibold">
+                Explorar Habilidades
+              </Button>
             </div>
             
-            <div className="mt-8 grid grid-cols-3 gap-4 text-center lg:text-left">
-              <div>
-                <div className="flex items-center justify-center lg:justify-start">
-                  <Users className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-2xl font-bold text-gray-900">50K+</span>
+            <div className="mt-12 grid grid-cols-3 gap-6 text-center lg:text-left">
+              <div className="bg-white/60 rounded-xl p-4 shadow-sm">
+                <div className="flex items-center justify-center lg:justify-start mb-2">
+                  <Users className="h-6 w-6 text-teal-600 mr-2" />
+                  <span className="text-2xl font-bold text-gray-900">500+</span>
                 </div>
-                <p className="text-sm text-gray-500">Students</p>
+                <p className="text-sm text-gray-600 font-medium">Estudiantes</p>
               </div>
-              <div>
-                <div className="flex items-center justify-center lg:justify-start">
-                  <BookOpen className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-2xl font-bold text-gray-900">100+</span>
+              <div className="bg-white/60 rounded-xl p-4 shadow-sm">
+                <div className="flex items-center justify-center lg:justify-start mb-2">
+                  <BookOpen className="h-6 w-6 text-teal-600 mr-2" />
+                  <span className="text-2xl font-bold text-gray-900">200+</span>
                 </div>
-                <p className="text-sm text-gray-500">Courses</p>
+                <p className="text-sm text-gray-600 font-medium">Habilidades</p>
               </div>
-              <div>
-                <div className="flex items-center justify-center lg:justify-start">
-                  <Award className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-2xl font-bold text-gray-900">98%</span>
+              <div className="bg-white/60 rounded-xl p-4 shadow-sm">
+                <div className="flex items-center justify-center lg:justify-start mb-2">
+                  <Award className="h-6 w-6 text-teal-600 mr-2" />
+                  <span className="text-2xl font-bold text-gray-900">95%</span>
                 </div>
-                <p className="text-sm text-gray-500">Success Rate</p>
+                <p className="text-sm text-gray-600 font-medium">Satisfacción</p>
               </div>
             </div>
           </div>
           
-          <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
-            <div className="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
-              <div className="relative block w-full bg-white rounded-lg overflow-hidden">
+          <div className="mt-12 lg:mt-0 lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white">
                 <img
-                  className="w-full h-64 sm:h-72 object-cover"
+                  className="w-full h-full object-cover"
                   src="/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png"
-                  alt="Student learning with books and mobile device"
+                  alt="Estudiante IFTS18 Skillswap"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-            </div>
-            
-            <div className="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-lg">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-sm font-medium">Live Classes</span>
+              
+              <div className="absolute -top-4 -right-4 bg-orange-500 rounded-full p-4 shadow-lg">
+                <BookOpen className="h-8 w-8 text-white" />
               </div>
-            </div>
-            
-            <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
-              <div className="flex items-center space-x-2">
-                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span className="text-sm font-medium">4.9 Rating</span>
+              
+              <div className="absolute -bottom-4 -left-4 bg-teal-600 rounded-full p-4 shadow-lg">
+                <Users className="h-8 w-8 text-white" />
               </div>
             </div>
           </div>

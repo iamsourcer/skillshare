@@ -7,20 +7,20 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Courses", href: "#courses" },
-    { name: "About", href: "#about" },
-    { name: "Instructors", href: "#instructors" },
-    { name: "Contact", href: "#contact" },
+    { name: "Inicio", href: "#" },
+    { name: "Habilidades", href: "#skills" },
+    { name: "Comunidad", href: "#community" },
+    { name: "Eventos", href: "#events" },
+    { name: "Contacto", href: "#contact" },
   ];
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 border-b border-teal-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <BookOpen className="h-8 w-8 text-blue-600" />
-            <span className="ml-2 text-xl font-bold text-gray-900">EduMim</span>
+            <BookOpen className="h-8 w-8 text-teal-600" />
+            <span className="ml-2 text-xl font-bold text-teal-700">IFTS18 Skillswap</span>
           </div>
           
           <div className="hidden md:block">
@@ -29,7 +29,7 @@ const Navigation = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-700 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 border-transparent hover:border-teal-600"
                 >
                   {item.name}
                 </a>
@@ -39,11 +39,11 @@ const Navigation = () => {
           
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6 space-x-3">
-              <Button variant="outline" size="sm">
-                Login
+              <Button variant="outline" size="sm" className="border-teal-600 text-teal-700 hover:bg-teal-50">
+                Iniciar Sesión
               </Button>
-              <Button size="sm">
-                Sign Up
+              <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-white">
+                Registrarse
               </Button>
             </div>
           </div>
@@ -53,6 +53,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
+              className="text-teal-700"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -62,23 +63,23 @@ const Navigation = () => {
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-teal-100">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-900 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                className="text-gray-700 hover:text-teal-600 block px-3 py-2 rounded-md text-base font-medium"
               >
                 {item.name}
               </a>
             ))}
-            <div className="pt-4 pb-3 border-t border-gray-200">
+            <div className="pt-4 pb-3 border-t border-teal-100">
               <div className="flex items-center space-x-3">
-                <Button variant="outline" size="sm" className="w-full">
-                  Login
+                <Button variant="outline" size="sm" className="w-full border-teal-600 text-teal-700">
+                  Iniciar Sesión
                 </Button>
-                <Button size="sm" className="w-full">
-                  Sign Up
+                <Button size="sm" className="w-full bg-orange-500 hover:bg-orange-600">
+                  Registrarse
                 </Button>
               </div>
             </div>

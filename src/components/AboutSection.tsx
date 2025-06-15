@@ -6,65 +6,65 @@ const AboutSection = () => {
   const features = [
     {
       icon: Target,
-      title: "Expert-Led Learning",
-      description: "Learn from industry professionals with real-world experience"
+      title: "Intercambio de Habilidades",
+      description: "Comparte lo que sabes y aprende lo que necesitas de otros estudiantes"
     },
     {
       icon: Lightbulb,
-      title: "Interactive Content",
-      description: "Engaging videos, quizzes, and hands-on projects"
+      title: "Aprendizaje Colaborativo",
+      description: "Sesiones interactivas y proyectos grupales para potenciar tu aprendizaje"
     },
     {
       icon: Users,
-      title: "Community Support",
-      description: "Connect with fellow learners and get help when needed"
+      title: "Comunidad Activa",
+      description: "Conecta con compañeros que comparten tus intereses y objetivos"
     },
     {
       icon: Award,
-      title: "Certificates",
-      description: "Earn recognized certificates upon course completion"
+      title: "Reconocimiento",
+      description: "Obtén badges y reconocimientos por tu participación y enseñanza"
     },
     {
       icon: Globe,
-      title: "Global Access",
-      description: "Learn anytime, anywhere with our mobile-friendly platform"
+      title: "Red Profesional",
+      description: "Construye tu red de contactos profesionales desde el instituto"
     }
   ];
 
   const benefits = [
-    "Lifetime access to courses",
-    "30-day money-back guarantee",
-    "Mobile app for learning on-the-go",
-    "Regular content updates",
-    "Career support services"
+    "Acceso gratuito a todas las habilidades",
+    "Intercambios flexibles según tu horario",
+    "Certificados de participación",
+    "Mentorías entre estudiantes",
+    "Eventos y workshops exclusivos"
   ];
 
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="community" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-6">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Why Choose EduMim?
+              ¿Por qué elegir <span className="text-teal-600">IFTS18 Skillswap</span>?
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              We're committed to providing the highest quality online education experience. 
-              Our platform combines cutting-edge technology with proven teaching methodologies 
-              to help you achieve your learning goals.
+              Somos más que una plataforma educativa. Somos una comunidad de estudiantes 
+              comprometidos con el crecimiento mutuo y el intercambio de conocimientos. 
+              Aquí cada uno enseña y todos aprenden.
             </p>
             
             <div className="mt-8 space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-teal-500 mr-3" />
                   <span className="text-gray-700">{benefit}</span>
                 </div>
               ))}
             </div>
             
             <div className="mt-8">
-              <Button size="lg">
-                Start Learning Today
+              <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                Únete a la Comunidad
               </Button>
             </div>
           </div>
@@ -72,9 +72,9 @@ const AboutSection = () => {
           <div className="mt-12 lg:mt-0 lg:col-span-6">
             <div className="grid grid-cols-1 gap-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start">
+                <div key={index} className="flex items-start bg-teal-50 p-4 rounded-lg">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-teal-600 text-white">
                       <feature.icon className="h-6 w-6" />
                     </div>
                   </div>
