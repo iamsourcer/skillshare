@@ -45,7 +45,7 @@ const AboutSection = () => {
         <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
           <div className="lg:col-span-6">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              ¿Por qué elegir <span className="text-teal-600">IFTS18 Skillswap</span>?
+              ¿Por qué elegir <span className="text-teal-600">IFTS Skillswap</span>?
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Somos más que una plataforma educativa. Somos una comunidad de estudiantes 

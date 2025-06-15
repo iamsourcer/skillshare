@@ -1,4 +1,3 @@
-
 import { BookOpen, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -41,17 +40,17 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
               <BookOpen className="h-8 w-8 text-teal-400" />
-              <span className="ml-2 text-xl font-bold">IFTS18 Skillswap</span>
+              <span className="ml-2 text-xl font-bold">IFTS Skillswap</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Conectando estudiantes del IFTS18 para intercambiar conocimientos y habilidades. 
+              Conectando estudiantes del IFTS para intercambiar conocimientos y habilidades. 
               Únete a nuestra comunidad donde cada uno enseña y todos aprenden.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3" />
-                <span>skillswap@ifts18.edu.ar</span>
+                <span>skillswap@ifts.edu.ar</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3" />
@@ -110,7 +109,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
-            © 2024 IFTS18 Skillswap. Todos los derechos reservados.
+            © 2024 IFTS Skillswap. Todos los derechos reservados.
           </div>
           
           <div className="flex space-x-4 mt-4 md:mt-0">

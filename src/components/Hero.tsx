@@ -18,7 +18,7 @@ const Hero = () => {
               <h1 className="text-5xl tracking-tight font-bold text-gray-900 sm:text-6xl md:text-7xl">
                 <span className="block text-teal-600">¡Hola!</span>
                 <span className="block text-gray-800">Bienvenido a</span>
-                <span className="block text-teal-700 font-extrabold">IFTS18 Skillswap</span>
+                <span className="block text-teal-700 font-extrabold">IFTS Skillswap</span>
               </h1>
             </div>
             

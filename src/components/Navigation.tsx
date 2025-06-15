@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -20,7 +19,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <BookOpen className="h-8 w-8 text-teal-600" />
-            <span className="ml-2 text-xl font-bold text-teal-700">IFTS18 Skillswap</span>
+            <span className="ml-2 text-xl font-bold text-teal-700">IFTS Skillswap</span>
           </div>
           
           <div className="hidden md:block">
