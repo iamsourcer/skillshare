@@ -94,8 +94,8 @@ const SkillsExplorer = () => {
   const filteredStudents = allStudents.filter(student => {
     const matchesSearch = student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          student.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesLocation = !selectedLocation || student.location === selectedLocation;
-    const matchesSkill = !selectedSkill || student.skills.includes(selectedSkill);
+    const matchesLocation = !selectedLocation || selectedLocation === "all" || student.location === selectedLocation;
+    const matchesSkill = !selectedSkill || selectedSkill === "all" || student.skills.includes(selectedSkill);
     
     return matchesSearch && matchesLocation && matchesSkill;
   });
@@ -144,7 +144,7 @@ const SkillsExplorer = () => {
                 <SelectValue placeholder="Filtrar por ubicación" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Todas las ubicaciones</SelectItem>
+                <SelectItem value="all">Todas las ubicaciones</SelectItem>
                 {locations.map(location => (
                   <SelectItem key={location} value={location}>{location}</SelectItem>
                 ))}
@@ -157,7 +157,7 @@ const SkillsExplorer = () => {
                 <SelectValue placeholder="Filtrar por habilidad" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">Todas las habilidades</SelectItem>
+                <SelectItem value="all">Todas las habilidades</SelectItem>
                 {allSkills.map(skill => (
                   <SelectItem key={skill} value={skill}>{skill}</SelectItem>
                 ))}
