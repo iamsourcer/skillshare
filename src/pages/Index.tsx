@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import Statistics from "@/components/Statistics";
 import SkillsExplorer from "@/components/SkillsExplorer";
 import TopStudents from "@/components/TopStudents";
+import CompanyCarousel from "@/components/CompanyCarousel";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
@@ -20,6 +21,7 @@ const Index = () => {
       <Statistics />
       <SkillsExplorer />
       <TopStudents />
+      <CompanyCarousel />
       <Testimonials />
       <CallToAction />
       <Footer />
