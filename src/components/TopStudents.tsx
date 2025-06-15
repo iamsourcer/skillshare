@@ -1,4 +1,3 @@
-
 import { Star, TrendingUp, Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -12,7 +11,7 @@ const TopStudents = () => {
     {
       id: 1,
       name: "Ana María Rodríguez",
-      image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=150&q=80",
       course: "Análisis de Sistemas",
       year: "3er Año",
       rating: 4.9,

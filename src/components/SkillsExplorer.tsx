@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Search, MapPin, Filter } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,7 +19,7 @@ const SkillsExplorer = () => {
     {
       id: 1,
       name: "Ana María Rodríguez",
-      image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=150&q=80",
       location: "CABA, Buenos Aires",
       course: "Análisis de Sistemas",
       year: "3er Año",

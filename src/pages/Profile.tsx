@@ -17,7 +17,7 @@ const Profile = () => {
     {
       id: 1,
       name: "Ana María Rodríguez",
-      image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=300&q=80",
       location: "Buenos Aires, Argentina",
       email: "ana.rodriguez@ifts18.edu.ar",
       phone: "+54 11 1234-5678",
