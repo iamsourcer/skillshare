@@ -3,27 +3,27 @@ import { BookOpen, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin }
 
 const Footer = () => {
   const quickLinks = [
-    { name: "About Us", href: "#" },
-    { name: "Courses", href: "#" },
-    { name: "Instructors", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Inicio", href: "#" },
+    { name: "Habilidades", href: "#skills" },
+    { name: "Comunidad", href: "#community" },
+    { name: "Eventos", href: "#events" },
+    { name: "Contacto", href: "#contact" },
   ];
 
-  const categories = [
-    { name: "Web Development", href: "#" },
-    { name: "Data Science", href: "#" },
-    { name: "Digital Marketing", href: "#" },
-    { name: "Design", href: "#" },
-    { name: "Business", href: "#" },
+  const skillCategories = [
+    { name: "Programación", href: "#" },
+    { name: "Diseño Gráfico", href: "#" },
+    { name: "Marketing Digital", href: "#" },
+    { name: "Idiomas", href: "#" },
+    { name: "Matemáticas", href: "#" },
   ];
 
   const support = [
-    { name: "Help Center", href: "#" },
-    { name: "Student Support", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Refund Policy", href: "#" },
+    { name: "Centro de Ayuda", href: "#" },
+    { name: "Soporte Estudiantil", href: "#" },
+    { name: "Política de Privacidad", href: "#" },
+    { name: "Términos de Servicio", href: "#" },
+    { name: "Guía de Intercambios", href: "#" },
   ];
 
   const socialLinks = [
@@ -40,37 +40,37 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <BookOpen className="h-8 w-8 text-blue-400" />
-              <span className="ml-2 text-xl font-bold">EduMim</span>
+              <BookOpen className="h-8 w-8 text-teal-400" />
+              <span className="ml-2 text-xl font-bold">IFTS18 Skillswap</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Empowering learners worldwide with high-quality online education. 
-              Join millions of students and transform your career with our expert-led courses.
+              Conectando estudiantes del IFTS18 para intercambiar conocimientos y habilidades. 
+              Únete a nuestra comunidad donde cada uno enseña y todos aprenden.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3" />
-                <span>hello@edumim.com</span>
+                <span>skillswap@ifts18.edu.ar</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3" />
-                <span>+1 (555) 123-4567</span>
+                <span>+54 11 1234-5678</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-5 w-5 mr-3" />
-                <span>123 Learning St, Education City</span>
+                <span>Av. Roque Sáenz Peña 832, CABA</span>
               </div>
             </div>
           </div>
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4 text-teal-400">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-gray-300 hover:text-white transition-colors">
+                  <a href={link.href} className="text-gray-300 hover:text-orange-400 transition-colors">
                     {link.name}
                   </a>
                 </li>
@@ -78,13 +78,13 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Categories */}
+          {/* Skill Categories */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Categories</h3>
+            <h3 className="text-lg font-semibold mb-4 text-teal-400">Categorías</h3>
             <ul className="space-y-2">
-              {categories.map((category) => (
+              {skillCategories.map((category) => (
                 <li key={category.name}>
-                  <a href={category.href} className="text-gray-300 hover:text-white transition-colors">
+                  <a href={category.href} className="text-gray-300 hover:text-orange-400 transition-colors">
                     {category.name}
                   </a>
                 </li>
@@ -94,11 +94,11 @@ const Footer = () => {
           
           {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <h3 className="text-lg font-semibold mb-4 text-teal-400">Soporte</h3>
             <ul className="space-y-2">
               {support.map((item) => (
                 <li key={item.name}>
-                  <a href={item.href} className="text-gray-300 hover:text-white transition-colors">
+                  <a href={item.href} className="text-gray-300 hover:text-orange-400 transition-colors">
                     {item.name}
                   </a>
                 </li>
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
-            © 2024 EduMim. All rights reserved.
+            © 2024 IFTS18 Skillswap. Todos los derechos reservados.
           </div>
           
           <div className="flex space-x-4 mt-4 md:mt-0">
@@ -118,7 +118,7 @@ const Footer = () => {
               <a
                 key={index}
                 href={social.href}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-orange-400 transition-colors"
               >
                 <social.icon className="h-5 w-5" />
               </a>
