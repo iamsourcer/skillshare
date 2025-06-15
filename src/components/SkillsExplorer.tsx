@@ -7,12 +7,15 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useNavigate } from "react-router-dom";
 
 const SkillsExplorer = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [selectedSkill, setSelectedSkill] = useState("");
 
+  // Show only first 6 students for the homepage section
   const allStudents = [
     {
       id: 1,
@@ -104,7 +107,7 @@ const SkillsExplorer = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <span
         key={i}
-        className={`text-sm ${
+        className={`text-xs ${
           i < Math.floor(rating) ? "text-orange-400" : "text-gray-300"
         }`}
       >
@@ -113,21 +116,25 @@ const SkillsExplorer = () => {
     ));
   };
 
+  const handleViewProfile = (studentId: number) => {
+    navigate(`/profile/${studentId}`);
+  };
+
   return (
-    <section id="skills" className="py-16 bg-gray-50">
+    <section id="skills" className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-extrabold text-gray-900 sm:text-3xl mb-3">
             Explorar Habilidades
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg text-gray-600">
             Encuentra mentores por ubicación y habilidades específicas
           </p>
         </div>
 
         {/* Search and Filter Section */}
-        <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
               <Input
@@ -166,12 +173,12 @@ const SkillsExplorer = () => {
           </div>
         </div>
 
-        {/* Results */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredStudents.map((student) => (
-            <Card key={student.id} className="hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center pb-4">
-                <Avatar className="h-16 w-16 mx-auto mb-3">
+        {/* Results - Show only first 6 for homepage */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {filteredStudents.slice(0, 6).map((student) => (
+            <Card key={student.id} className="hover:shadow-lg transition-shadow h-fit">
+              <CardHeader className="text-center pb-3">
+                <Avatar className="h-14 w-14 mx-auto mb-3">
                   <AvatarImage 
                     src={student.image} 
                     alt={student.name}
@@ -179,7 +186,7 @@ const SkillsExplorer = () => {
                   />
                   <AvatarFallback>{student.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-lg">{student.name}</CardTitle>
+                <CardTitle className="text-base">{student.name}</CardTitle>
                 <p className="text-teal-600 font-medium text-sm">{student.course}</p>
                 <div className="flex items-center justify-center gap-1 text-xs text-gray-500">
                   <MapPin className="h-3 w-3" />
@@ -187,7 +194,7 @@ const SkillsExplorer = () => {
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3 pt-0">
                 {/* Rating */}
                 <div className="flex items-center justify-center gap-2">
                   <div className="flex">
@@ -199,13 +206,18 @@ const SkillsExplorer = () => {
 
                 {/* Skills */}
                 <div>
-                  <p className="text-sm font-medium text-gray-700 mb-2">Habilidades:</p>
+                  <p className="text-xs font-medium text-gray-700 mb-2">Habilidades:</p>
                   <div className="flex flex-wrap gap-1">
-                    {student.skills.map((skill) => (
+                    {student.skills.slice(0, 3).map((skill) => (
                       <Badge key={skill} variant="outline" className="text-xs">
                         {skill}
                       </Badge>
                     ))}
+                    {student.skills.length > 3 && (
+                      <Badge variant="outline" className="text-xs">
+                        +{student.skills.length - 3}
+                      </Badge>
+                    )}
                   </div>
                 </div>
 
@@ -223,11 +235,12 @@ const SkillsExplorer = () => {
 
                 {/* Contact Button */}
                 <Button 
+                  onClick={() => handleViewProfile(student.id)}
                   className="w-full bg-teal-600 hover:bg-teal-700" 
                   size="sm"
                   disabled={student.availability === "Ocupado"}
                 >
-                  Solicitar Mentoría
+                  Ver Perfil
                 </Button>
               </CardContent>
             </Card>
@@ -235,12 +248,21 @@ const SkillsExplorer = () => {
         </div>
 
         {filteredStudents.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-500 text-lg">
+          <div className="text-center py-8">
+            <p className="text-gray-500 text-base">
               No se encontraron estudiantes con los criterios seleccionados.
             </p>
           </div>
         )}
+
+        <div className="text-center mt-6">
+          <Button 
+            onClick={() => navigate('/skills')}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2"
+          >
+            Ver Todos los Estudiantes
+          </Button>
+        </div>
       </div>
     </section>
   );

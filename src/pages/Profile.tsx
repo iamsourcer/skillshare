@@ -15,7 +15,7 @@ const Profile = () => {
   const student = {
     id: 1,
     name: "Ana María Rodríguez",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=400&q=80",
+    image: "/lovable-uploads/0d6658c3-e56c-4cb3-8a1a-ce13119f7d93.png",
     location: "Buenos Aires, Argentina",
     email: "ana.rodriguez@ifts18.edu.ar",
     phone: "+54 11 1234-5678",
@@ -112,7 +112,7 @@ const Profile = () => {
           <CardContent className="p-8">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
               <Avatar className="h-32 w-32">
-                <AvatarImage src={student.image} alt={student.name} />
+                <AvatarImage src={student.image} alt={student.name} className="object-cover" />
                 <AvatarFallback>{student.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
               </Avatar>
               
