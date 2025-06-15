@@ -55,11 +55,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="h-5 w-5 mr-3" />
-                <span>+54 11 1234-5678</span>
+                <span>011 4823-2477</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="h-5 w-5 mr-3" />
-                <span>Av. Roque Sáenz Peña 832, CABA</span>
+                <span>Gral. Lucio Norberto Mansilla 3643, C1425BPW Cdad. Autónoma de Buenos Aires</span>
               </div>
             </div>
           </div>
