@@ -9,10 +9,8 @@ const Navigation = () => {
   const navItems = [
     { name: "Inicio", href: "/" },
     { name: "Habilidades", href: "/skills" },
-    { name: "Estudiantes", href: "#community" },
     { name: "Empleos", href: "/jobs" },
     { name: "Empleadores", href: "/employer" },
-    { name: "Contacto", href: "#contact" },
   ];
 
   return (
