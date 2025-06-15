@@ -11,19 +11,19 @@ const CompanyCarousel = () => {
   const companies = [
     {
       name: "Mercado Libre",
-      logo: "https://logoeps.com/wp-content/uploads/2013/03/mercado-libre-vector-logo.png"
-    },
-    {
-      name: "Globant",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Globant_logo.svg/2560px-Globant_logo.svg.png"
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/MercadoLibre_Logo.svg/2048px-MercadoLibre_Logo.svg.png"
     },
     {
       name: "Uala",
-      logo: "https://media.licdn.com/dms/image/C4D0BAQGQs8CWz8nabQ/company-logo_200_200/0/1631315313949?e=2147483647&v=beta&t=8Qd8xQTJKm2QN_2xYsJxYnKj8cQxVhCXvQrxzPQgMzU"
+      logo: "https://seeklogo.com/images/U/uala-logo-6A2A4CE778-seeklogo.com.png"
+    },
+    {
+      name: "Globant",
+      logo: "https://seeklogo.com/images/G/globant-logo-FAE5E4D14D-seeklogo.com.png"
     },
     {
       name: "Banco Galicia",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Banco_Galicia_logo.svg/2560px-Banco_Galicia_logo.svg.png"
+      logo: "https://seeklogo.com/images/B/banco-galicia-logo-04D47CECE0-seeklogo.com.png"
     },
     {
       name: "Accenture",
@@ -35,7 +35,7 @@ const CompanyCarousel = () => {
     },
     {
       name: "Despegar",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Despegar.com_logo.svg/2560px-Despegar.com_logo.svg.png"
+      logo: "https://seeklogo.com/images/D/despegar-logo-4B2C1F1A30-seeklogo.com.png"
     },
     {
       name: "Santander Argentina",
@@ -43,19 +43,19 @@ const CompanyCarousel = () => {
     },
     {
       name: "BBVA Argentina",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/BBVA_2019.svg/2560px-BBVA_2019.svg.png"
+      logo: "https://seeklogo.com/images/B/bbva-logo-4C8BCB4C65-seeklogo.com.png"
     },
     {
       name: "Telecom Argentina",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Telecom_Argentina_logo.svg/2560px-Telecom_Argentina_logo.svg.png"
+      logo: "https://seeklogo.com/images/T/telecom-argentina-logo-35A7C2E2C9-seeklogo.com.png"
     },
     {
       name: "Naranja X",
-      logo: "https://media.licdn.com/dms/image/C4D0BAQFxL8kQQQQQQQ/company-logo_200_200/0/1631315313949"
+      logo: "https://seeklogo.com/images/N/naranja-x-logo-FA67B1A0D5-seeklogo.com.png"
     },
     {
       name: "YPF",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/YPF_logo.svg/2560px-YPF_logo.svg.png"
+      logo: "https://seeklogo.com/images/Y/ypf-logo-BB22485A92-seeklogo.com.png"
     }
   ];
 
