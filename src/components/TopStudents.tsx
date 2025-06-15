@@ -89,7 +89,7 @@ const TopStudents = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section id="community" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -118,7 +118,11 @@ const TopStudents = () => {
                 <CardHeader className="text-center pb-4">
                   <div className="relative">
                     <Avatar className="h-20 w-20 mx-auto mb-4">
-                      <AvatarImage src={student.image} alt={student.name} />
+                      <AvatarImage 
+                        src={student.image} 
+                        alt={student.name}
+                        className="object-cover"
+                      />
                       <AvatarFallback>{student.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                     </Avatar>
                     
