@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Inicio", href: "/" },
-    { name: "Habilidades", href: "#skills" },
+    { name: "Habilidades", href: "/skills" },
     { name: "Estudiantes", href: "#community" },
     { name: "Empleos", href: "/jobs" },
     { name: "Empleadores", href: "/employer" },
