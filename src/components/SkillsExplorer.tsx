@@ -55,7 +55,7 @@ const SkillsExplorer = () => {
     {
       id: 4,
       name: "Diego Fernández",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
       location: "CABA, Buenos Aires",
       course: "Análisis de Sistemas",
       year: "2do Año",
@@ -79,7 +79,7 @@ const SkillsExplorer = () => {
     {
       id: 6,
       name: "Joaquín Morales",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80",
       location: "Mendoza, Mendoza",
       course: "Análisis de Sistemas",
       year: "1er Año",

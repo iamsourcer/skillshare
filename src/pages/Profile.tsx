@@ -124,6 +124,178 @@ const Profile = () => {
           subject: "Node.js"
         }
       ]
+    },
+    {
+      id: 3,
+      name: "María González",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80",
+      location: "Córdoba, Argentina",
+      email: "maria.gonzalez@ifts18.edu.ar",
+      phone: "+54 351 1234-5678",
+      course: "Tecnicatura en Programación",
+      year: "3er Año",
+      joinDate: "Febrero 2023",
+      rating: 4.7,
+      totalReviews: 21,
+      mentorSessions: 42,
+      bio: "Especialista en Java y desarrollo de aplicaciones empresariales. Me apasiona enseñar programación orientada a objetos y buenas prácticas de código.",
+      skills: [
+        { name: "Java", level: "Avanzado", category: "Backend" },
+        { name: "Spring", level: "Intermedio", category: "Backend" },
+        { name: "SQL", level: "Avanzado", category: "Database" },
+        { name: "Python", level: "Básico", category: "Backend" }
+      ],
+      languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Básico" }
+      ],
+      experiences: [
+        {
+          title: "Desarrolladora Java Junior",
+          company: "Consultora IT",
+          period: "Abr 2024 - Presente",
+          description: "Desarrollo de aplicaciones empresariales con Spring Framework."
+        }
+      ],
+      reviews: [
+        {
+          id: 1,
+          author: "Diego Fernández",
+          rating: 5,
+          date: "10 Nov 2024",
+          comment: "María tiene un dominio excelente de Java. Sus clases son muy organizadas.",
+          subject: "Java POO"
+        }
+      ]
+    },
+    {
+      id: 4,
+      name: "Diego Fernández",
+      image: "https://images.unsplash.com/photo-1500648741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      location: "Buenos Aires, Argentina",
+      email: "diego.fernandez@ifts18.edu.ar",
+      phone: "+54 11 5678-1234",
+      course: "Tecnicatura en Análisis de Sistemas",
+      year: "2do Año",
+      joinDate: "Mayo 2023",
+      rating: 4.6,
+      totalReviews: 15,
+      mentorSessions: 28,
+      bio: "Enfocado en tecnologías Microsoft y desarrollo en la nube. Me gusta enseñar C# y Azure, además de conceptos de arquitectura de software.",
+      skills: [
+        { name: "C#", level: "Avanzado", category: "Backend" },
+        { name: ".NET", level: "Intermedio", category: "Backend" },
+        { name: "Azure", level: "Básico", category: "Tools" },
+        { name: "SQL", level: "Intermedio", category: "Database" }
+      ],
+      languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Intermedio" }
+      ],
+      experiences: [
+        {
+          title: "Desarrollador .NET Junior",
+          company: "Software Factory",
+          period: "Jul 2024 - Presente",
+          description: "Desarrollo de aplicaciones web con ASP.NET Core y Azure."
+        }
+      ],
+      reviews: [
+        {
+          id: 1,
+          author: "Joaquín Morales",
+          rating: 5,
+          date: "05 Nov 2024",
+          comment: "Diego explica C# de manera muy clara. Excelente mentor para .NET.",
+          subject: "C# Básico"
+        }
+      ]
+    },
+    {
+      id: 5,
+      name: "Lucía Martínez",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80",
+      location: "Rosario, Santa Fe",
+      email: "lucia.martinez@ifts18.edu.ar",
+      phone: "+54 341 1234-5678",
+      course: "Tecnicatura en Desarrollo Web",
+      year: "3er Año",
+      joinDate: "Marzo 2023",
+      rating: 4.6,
+      totalReviews: 18,
+      mentorSessions: 31,
+      bio: "Especialista en frontend moderno con Vue.js y TypeScript. Me enfoco en crear interfaces de usuario atractivas y funcionales.",
+      skills: [
+        { name: "Vue.js", level: "Avanzado", category: "Frontend" },
+        { name: "TypeScript", level: "Intermedio", category: "Frontend" },
+        { name: "AWS", level: "Básico", category: "Tools" },
+        { name: "React", level: "Básico", category: "Frontend" }
+      ],
+      languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Avanzado" }
+      ],
+      experiences: [
+        {
+          title: "Frontend Developer",
+          company: "Agencia Digital",
+          period: "Sep 2024 - Presente",
+          description: "Desarrollo de SPAs con Vue.js y integración con APIs REST."
+        }
+      ],
+      reviews: [
+        {
+          id: 1,
+          author: "Ana Rodríguez",
+          rating: 4,
+          date: "03 Nov 2024",
+          comment: "Lucía es muy buena enseñando Vue.js. Sus ejemplos son muy prácticos.",
+          subject: "Vue.js Fundamentos"
+        }
+      ]
+    },
+    {
+      id: 6,
+      name: "Joaquín Morales",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
+      location: "Mendoza, Argentina",
+      email: "joaquin.morales@ifts18.edu.ar",
+      phone: "+54 261 1234-5678",
+      course: "Tecnicatura en Análisis de Sistemas",
+      year: "1er Año",
+      joinDate: "Agosto 2024",
+      rating: 4.4,
+      totalReviews: 8,
+      mentorSessions: 15,
+      bio: "Nuevo en el mundo de la programación pero muy entusiasta. Me especializo en Python y desarrollo web básico. Disfruto ayudar a otros principiantes.",
+      skills: [
+        { name: "Python", level: "Intermedio", category: "Backend" },
+        { name: "Django", level: "Básico", category: "Backend" },
+        { name: "PostgreSQL", level: "Básico", category: "Database" },
+        { name: "HTML/CSS", level: "Intermedio", category: "Frontend" }
+      ],
+      languages: [
+        { name: "Español", level: "Nativo" },
+        { name: "Inglés", level: "Básico" }
+      ],
+      experiences: [
+        {
+          title: "Estudiante Mentor",
+          company: "IFTS Skillswap",
+          period: "Sep 2024 - Presente",
+          description: "Ayudo a estudiantes de primer año con conceptos básicos de programación."
+        }
+      ],
+      reviews: [
+        {
+          id: 1,
+          author: "Carlos López",
+          rating: 4,
+          date: "01 Nov 2024",
+          comment: "Joaquín es muy paciente y entiende las dificultades de los principiantes.",
+          subject: "Python Básico"
+        }
+      ]
     }
   ];
 

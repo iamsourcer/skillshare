@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Search, MapPin, Filter, Star, Calendar, Users, BookOpen, Mail, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,7 +20,7 @@ const Skills = () => {
     {
       id: 1,
       name: "Ana María Rodríguez",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=300&q=80",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=300&q=80",
       location: "CABA, Buenos Aires",
       email: "ana.rodriguez@ifts18.edu.ar",
       course: "Análisis de Sistemas",
@@ -97,7 +96,7 @@ const Skills = () => {
     {
       id: 4,
       name: "Diego Fernández",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
       location: "CABA, Buenos Aires",
       email: "diego.fernandez@ifts18.edu.ar",
       course: "Comunicación",
@@ -149,7 +148,7 @@ const Skills = () => {
     {
       id: 6,
       name: "Joaquín Morales",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80",
       location: "Mendoza, Mendoza",
       email: "joaquin.morales@ifts18.edu.ar",
       course: "Física",
