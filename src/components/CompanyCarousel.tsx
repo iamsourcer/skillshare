@@ -11,15 +11,15 @@ const CompanyCarousel = () => {
   const companies = [
     {
       name: "Mercado Libre",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Mercado_Libre_logo.svg/2560px-Mercado_Libre_logo.svg.png"
+      logo: "https://logoeps.com/wp-content/uploads/2013/03/mercado-libre-vector-logo.png"
     },
     {
       name: "Globant",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Globant_logo.svg/2560px-Globant_logo.svg.png"
+      logo: "https://www.globant.com/sites/default/files/image/2021-06/globant-logo.png"
     },
     {
-      name: "Telefónica",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Telefonica_logo.svg/2560px-Telefonica_logo.svg.png"
+      name: "Uala",
+      logo: "https://d1fdloi71mui9q.cloudfront.net/hqdefault_3SiCYGp6TSmBG71lc7ba.png"
     },
     {
       name: "Banco Galicia",
@@ -65,6 +65,10 @@ const CompanyCarousel = () => {
                         src={company.logo}
                         alt={`${company.name} logo`}
                         className="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        onError={(e) => {
+                          console.log(`Failed to load image for ${company.name}:`, company.logo);
+                          e.currentTarget.style.display = 'none';
+                        }}
                       />
                     </div>
                   </div>
