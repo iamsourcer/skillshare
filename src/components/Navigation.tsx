@@ -11,6 +11,7 @@ const Navigation = () => {
     { name: "Habilidades", href: "/skills" },
     { name: "Empleos", href: "/jobs" },
     { name: "Empleadores", href: "/employer" },
+    { name: "Novedades", href: "/novedades" },
   ];
 
   return (
