@@ -40,7 +40,7 @@ const Navigation = () => {
             
             {/* Points Display */}
             <div className="flex items-center gap-4">
-              <PointsDisplay size="md" />
+              <PointsDisplay size="md" clickable={true} />
               <Button className="bg-teal-600 hover:bg-teal-700">
                 Iniciar Sesión
               </Button>
@@ -49,7 +49,7 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-2">
-            <PointsDisplay size="sm" showLabel={false} />
+            <PointsDisplay size="sm" showLabel={false} clickable={true} />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-teal-600"
@@ -76,7 +76,7 @@ const Navigation = () => {
               </a>
             ))}
             <div className="px-3 py-2">
-              <PointsDisplay size="md" />
+              <PointsDisplay size="md" clickable={true} />
             </div>
             <div className="px-3 py-2">
               <Button className="w-full bg-teal-600 hover:bg-teal-700">

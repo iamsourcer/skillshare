@@ -11,6 +11,7 @@ import Skills from "./pages/Skills";
 import Jobs from "./pages/Jobs";
 import EmployerDashboard from "./pages/EmployerDashboard";
 import Novedades from "./pages/Novedades";
+import PointsHistory from "./pages/PointsHistory";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

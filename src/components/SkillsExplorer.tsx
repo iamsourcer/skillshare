@@ -133,6 +133,16 @@ const SkillsExplorer = () => {
     const success = spendPoints(student.sessionCost, `Sesión con ${student.name}`);
     if (success) {
       alert(`¡Sesión solicitada con ${student.name}! Se han deducido ${student.sessionCost} puntos.`);
+      
+      // Simulate completing a session and earning bonus points for high-rated mentors
+      setTimeout(() => {
+        const isHighRated = student.rating >= 4.7;
+        addPoints(
+          Math.floor(student.sessionCost * 0.8), 
+          `Sesión completada con ${student.name}`,
+          isHighRated
+        );
+      }, 2000);
     } else {
       alert(`No tienes suficientes puntos. Necesitas ${student.sessionCost} puntos para esta sesión.`);
     }
