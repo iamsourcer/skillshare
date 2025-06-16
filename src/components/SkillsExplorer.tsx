@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Search, MapPin, Filter, Coins } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,7 +11,7 @@ import { usePoints } from "@/contexts/PointsContext";
 
 const SkillsExplorer = () => {
   const navigate = useNavigate();
-  const { userPoints, spendPoints } = usePoints();
+  const { userPoints, spendPoints, addPoints } = usePoints();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [selectedSkill, setSelectedSkill] = useState("");
