@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { Search, MapPin, Filter } from "lucide-react";
+import { Search, MapPin, Filter, Coins } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -7,9 +8,11 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useNavigate } from "react-router-dom";
+import { usePoints } from "@/contexts/PointsContext";
 
 const SkillsExplorer = () => {
   const navigate = useNavigate();
+  const { userPoints, spendPoints } = usePoints();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedLocation, setSelectedLocation] = useState("");
   const [selectedSkill, setSelectedSkill] = useState("");
@@ -26,7 +29,8 @@ const SkillsExplorer = () => {
       rating: 4.9,
       reviews: 23,
       skills: ["React", "Python", "JavaScript", "Node.js"],
-      availability: "Disponible"
+      availability: "Disponible",
+      sessionCost: 35
     },
     {
       id: 2,
@@ -38,7 +42,8 @@ const SkillsExplorer = () => {
       rating: 4.8,
       reviews: 19,
       skills: ["Node.js", "MongoDB", "Express", "Vue.js"],
-      availability: "Disponible"
+      availability: "Disponible",
+      sessionCost: 30
     },
     {
       id: 3,
@@ -50,7 +55,8 @@ const SkillsExplorer = () => {
       rating: 4.7,
       reviews: 21,
       skills: ["Java", "Spring", "SQL", "Python"],
-      availability: "Ocupado"
+      availability: "Ocupado",
+      sessionCost: 40
     },
     {
       id: 4,
@@ -62,7 +68,8 @@ const SkillsExplorer = () => {
       rating: 4.6,
       reviews: 15,
       skills: ["C#", ".NET", "Azure", "SQL"],
-      availability: "Disponible"
+      availability: "Disponible",
+      sessionCost: 35
     },
     {
       id: 5,
@@ -74,7 +81,8 @@ const SkillsExplorer = () => {
       rating: 4.6,
       reviews: 18,
       skills: ["Vue.js", "TypeScript", "AWS", "React"],
-      availability: "Disponible"
+      availability: "Disponible",
+      sessionCost: 40
     },
     {
       id: 6,
@@ -86,7 +94,8 @@ const SkillsExplorer = () => {
       rating: 4.4,
       reviews: 8,
       skills: ["Python", "Django", "PostgreSQL"],
-      availability: "Disponible"
+      availability: "Disponible",
+      sessionCost: 25
     }
   ];
 
@@ -118,6 +127,15 @@ const SkillsExplorer = () => {
   const handleViewProfile = (studentId: number) => {
     console.log('SkillsExplorer - Navigating to profile ID:', studentId);
     navigate(`/profile/${studentId}`);
+  };
+
+  const handleRequestSession = (student: any) => {
+    const success = spendPoints(student.sessionCost, `Sesión con ${student.name}`);
+    if (success) {
+      alert(`¡Sesión solicitada con ${student.name}! Se han deducido ${student.sessionCost} puntos.`);
+    } else {
+      alert(`No tienes suficientes puntos. Necesitas ${student.sessionCost} puntos para esta sesión.`);
+    }
   };
 
   return (
@@ -221,6 +239,12 @@ const SkillsExplorer = () => {
                   </div>
                 </div>
 
+                {/* Session Cost */}
+                <div className="flex items-center justify-center gap-1 text-sm font-medium text-orange-600">
+                  <Coins className="h-4 w-4" />
+                  {student.sessionCost} puntos/sesión
+                </div>
+
                 {/* Availability */}
                 <div className="flex items-center justify-between">
                   <Badge 
@@ -233,15 +257,25 @@ const SkillsExplorer = () => {
                   </Badge>
                 </div>
 
-                {/* Contact Button */}
-                <Button 
-                  onClick={() => handleViewProfile(student.id)}
-                  className="w-full bg-teal-600 hover:bg-teal-700" 
-                  size="sm"
-                  disabled={student.availability === "Ocupado"}
-                >
-                  Ver Perfil
-                </Button>
+                {/* Action Buttons */}
+                <div className="flex gap-2">
+                  <Button 
+                    onClick={() => handleViewProfile(student.id)}
+                    variant="outline"
+                    className="flex-1" 
+                    size="sm"
+                  >
+                    Ver Perfil
+                  </Button>
+                  <Button 
+                    onClick={() => handleRequestSession(student)}
+                    className="flex-1 bg-teal-600 hover:bg-teal-700" 
+                    size="sm"
+                    disabled={student.availability === "Ocupado" || userPoints < student.sessionCost}
+                  >
+                    Solicitar
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
